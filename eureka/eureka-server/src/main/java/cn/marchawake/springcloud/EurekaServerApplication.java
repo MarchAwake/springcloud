@@ -18,9 +18,9 @@ public class EurekaServerApplication {
 
     public static void main(String[] args) {
 
-        SpringApplication app = new SpringApplication(EnableEurekaServer.class);
+        SpringApplication app = new SpringApplication(EurekaServerApplication.class);
         app.setWebApplicationType(WebApplicationType.SERVLET);
         ConfigurableEnvironment env = app.run(args).getEnvironment();
-        log.info("EnableEurekaServer 启动成功：{}", env.getProperty("server.host"));
+        log.info("EnableEurekaServer 启动成功 \thttp://127.0.0.1:{} ", env.getProperty("server.port"));
     }
 }
