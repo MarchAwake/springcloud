@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: RibbonConsumer
+
+server:
+  port: 20000
+
+eureka:
+  instance:
+    lease-expiration-duration-in-seconds: 1
+    lease-renewal-interval-in-seconds: 2
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8000/eureka
+
+#1. 服务提供者名称 + ribbon + NFLoadBalancerRuleClassName + 均衡类
+#2. 在配置类中加入 RibbonClient(name = "服务提供者名称", configuration = "com.netflix.loadbalancer.RandomRule") 注解
+EurekaClient:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
