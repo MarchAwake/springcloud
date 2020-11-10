@@ -24,6 +24,9 @@
         <module>eureka/eureka-server</module>
         <module>eureka/eureka-client</module>
         <module>ribbon/consumer</module>
+        <module>feign/feign-provide</module>
+        <module>feign/feign-interface</module>
+        <module>feign/feign-consumer</module>
     </modules>
 
 
