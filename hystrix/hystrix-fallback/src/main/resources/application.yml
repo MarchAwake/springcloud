@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: Hystrix
+  main:
+    allow-bean-definition-overriding: true
+
+server:
+  port: 40000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8000/eureka
+
+## 开启Feign下面的Hystrix功能
+feign:
+  hystrix:
+    enabled: true
+
+#服务提供者
+service-provider:
+  # ribbon
+  ribbon:
+    # 每台机器最大重试次数
+    MaxAutoRetries: 2
+    # 重试部署相同服务的机器的最大次
+    MaxAutoRetriesNextServer: 2
+    # 连接超时时间
+    ConnectTimeout: 1000
+    # 业务处理超时
+    ReadTimeout: 3000
+    # 所有的请求方式（HTTP Method）重试
+    OkToRetryOnAllOperations : true
+hystrix:
+  metrics:
+    polling-interval-ms: 3000
+
+

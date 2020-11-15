@@ -27,6 +27,7 @@
         <module>feign/feign-provide</module>
         <module>feign/feign-interface</module>
         <module>feign/feign-consumer</module>
+        <module>hystrix/hystrix-fallback</module>
     </modules>
 
 

@@ -9,3 +9,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:8000/eureka
+
+
+
+    # 负载均衡策略
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule.class
+#    NFLoadBalancerRuleClassName: cn.marchawake.springcloud.consumer.CustomRule

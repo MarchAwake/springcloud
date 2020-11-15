@@ -1,9 +1,8 @@
-package cn.marchawake.springcloud;
+package cn.marchawake.springcloud.registry;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.core.env.ConfigurableEnvironment;
